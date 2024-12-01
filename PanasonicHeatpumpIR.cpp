@@ -222,6 +222,7 @@ void PanasonicHeatpumpIR::sendPanasonic(IRSender& IR, uint8_t operatingMode, uin
       panasonicTemplate[25] = 0x06;
       break;
     case PANASONIC_JKE:
+      panasonicTemplate[17] = swingH;
       break;
     case PANASONIC_NKE:
       panasonicTemplate[17] = 0x06;
