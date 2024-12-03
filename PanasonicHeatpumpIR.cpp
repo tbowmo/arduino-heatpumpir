@@ -100,8 +100,8 @@ void PanasonicHeatpumpIR::send(IRSender& IR, uint8_t powerModeCmd, uint8_t opera
       break;
     case MODE_MAINT: // Maintenance mode is just the heat mode at +8 or +10, FAN5
       operatingMode |= PANASONIC_AIRCON2_MODE_HEAT;
-	  temperature = 10; // Default to +10 degrees
-	  fanSpeedCmd = FAN_5;
+      temperature = 10; // Default to +10 degrees
+      fanSpeedCmd = FAN_5;
       break;
   }
 
