@@ -127,7 +127,8 @@ void PanasonicHeatpumpIR::send(IRSender& IR, uint8_t powerModeCmd, uint8_t opera
       break;
   }
 
-  if ( temperatureCmd > 15 && temperatureCmd < 31)
+  if ( temperatureCmd > 15 && temperatureCmd < 31 
+    || (operatingModeCmd == MODE_MAINT && (temperatureCmd == 10 || temperatureCmd == 8)) )
   {
     temperature = temperatureCmd;
   }
